@@ -4,7 +4,7 @@ from odoo.exceptions import ValidationError
 
 class Appointments(models.Model):
     """Appointment Class to create the appointment dof the patient"""
-    
+
     _name = "appointment.appointment"
     _description = "Appointment model to handle the patient appointments"
     _rec_name = "appointment_id"
@@ -63,6 +63,7 @@ class Appointments(models.Model):
 
     @api.onchange('patient_id')
     def _onchange_patient_id(self):
+        """method to set the value of physician,speciality,health center name on the change of the patient"""
         if self.patient_id:
             self.health_center_name = self.patient_id.patient_primary_care_doctor_id.institution.name
             self.physician = self.patient_id.patient_primary_care_doctor_id.physisican_name.name

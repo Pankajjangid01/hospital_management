@@ -45,7 +45,7 @@ class MedicamentsMisc(models.Model):
         return res
 
     def unlink(self):
-        """method to delete the medicine from medicament list """
+        """method to delete the medicine from medicament list"""
         for record in self:
             self.env["medicament.list"].search([("name", "=", record.name)]).unlink()
         return super(MedicamentsMisc, self).unlink()
