@@ -19,7 +19,6 @@ from . import configuration_medical_procedure
 from . import configuration_health_centers
 from . import configuration_operational_areas
 from . import physicians
-from . import configuration_medicaments
 from . import insaurance
 from . import genetics
 from . import configuration_medicaments

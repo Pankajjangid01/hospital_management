@@ -83,10 +83,10 @@ class Occupation(models.Model):
     _name = "occupation.occupation"
     _description = "Creates the Occupations"
 
-    occupation = fields.Char(string="Occupation",required=True)
+    occupation_name = fields.Char(string="Occupation",required=True)
     code = fields.Char(string="Code",store = True)
 
-    @api.onchange('occupation')
+    @api.onchange('occupation_name')
     def _onchange_unit(self):
         """This method set the code on changing occupation"""
         if self.occupation:

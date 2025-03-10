@@ -33,7 +33,8 @@ class AppointmentEvaluation(models.TransientModel):
             'domain': domain,
             'target': 'current',
         }
-
-    def cancel(self):
+    
+    @staticmethod
+    def cancel():
         """Closes the wizard window"""
         return {'type': 'ir.actions.act_window_close'}

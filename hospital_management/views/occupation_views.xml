@@ -7,7 +7,7 @@
             <form string="Occupations">
                 <sheet>
                     <group>
-                        <field name="occupation"/>
+                        <field name="occupation_name"/>
                         <field name="code"/>
                     </group>
                 </sheet>
@@ -20,7 +20,7 @@
         <field name="model">occupation.occupation</field>
         <field name="arch" type="xml">
             <list>
-                <field name="occupation"/>
+                <field name="occupation_name"/>
                 <field name="code"/>
             </list>
         </field>
