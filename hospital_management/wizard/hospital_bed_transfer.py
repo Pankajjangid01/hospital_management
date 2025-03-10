@@ -18,7 +18,7 @@ class HospitalBedTransferWizard(models.TransientModel):
     reason = fields.Text(string="Reason", required=True)
 
     def action_transfer_bed(self):
-        """"Method to transfer the patient bed"""
+        """Method to transfer the patient bed"""
         if self.to_bed == self.from_bed:
             raise ValidationError("Cannot tranfer on the same bed. Please select valid bed number")
 

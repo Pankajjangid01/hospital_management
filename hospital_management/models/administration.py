@@ -112,7 +112,7 @@ class BedTransfer(models.Model):
                 raise exceptions.ValidationError(f"Bed {record.to_bed.health_center_bed_id} is already allocated!")
 
     def action_transfer(self):
-        """"method to transfer the patient bed"""
+        """method to transfer the patient bed"""
         if self.to_bed == self.from_bed:
             raise ValidationError("Cannot tranfer on the same bed. Please select valid bed number")
 

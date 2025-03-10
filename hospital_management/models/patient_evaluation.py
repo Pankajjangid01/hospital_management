@@ -19,7 +19,7 @@ class PatientEvaluation(models.Model):
 
     @api.onchange("patient_id")
     def _onchange_patient_id(self):
-        """"sets the doctor name on change of the patient name"""
+        """sets the doctor name on change of the patient name"""
         for record in self:
             if record.patient_id:
                 record.doctor = record.patient_id.patient_primary_care_doctor_id.physisican_name.name
