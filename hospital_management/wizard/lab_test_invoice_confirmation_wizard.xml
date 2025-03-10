@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="lab_test_invoice_form" model="ir.ui.view">
+        <field name="name">lab.test.invoice.form</field>
+        <field name="model">lab.test.invoice.confirmation.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create Lab Invoice">
+                    <h1>Do you want to generate the invoice(s)?</h1>
+                    <h1>Create Invoice</h1>
+                    <group>
+                        <field name="test_type" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button name="create_invoice" type="object" string="Create Lab Invoice" class="oe_highlight"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+        </field>
+    </record>
+</odoo>

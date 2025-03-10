@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="appointment_sequence" model="ir.sequence">
+        <field name="name">Appointment</field>
+        <field name="code">appointment.appointment</field>
+        <field name="prefix">APT</field>
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="prescription_sequence" model="ir.sequence">
+        <field name="name">Prescription</field>
+        <field name="code">prescription.prescription</field>
+        <field name="prefix">PRESC2017/</field>
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="administration_sequence" model="ir.sequence">
+        <field name="name">Adminitration</field>
+        <field name="code">administration.administration</field>
+        <field name="prefix">INPAC</field>
+        <field name="padding">3</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="newborn_baby_sequence" model="ir.sequence">
+        <field name="name">New Born Baby</field>
+        <field name="code">newborn.baby</field>
+        <field name="prefix">New</field>
+        <field name="padding">3</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="lab_test_request_sequence" model="ir.sequence">
+        <field name="name">Draft Lab Test request</field>
+        <field name="code">draft.laboratory</field>
+        <field name="prefix">LABT</field>
+        <field name="padding">3</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="test_info_sequence" model="ir.sequence">
+        <field name="name">Test Info</field>
+        <field name="code">test.type</field>
+        <field name="prefix">TEST</field>
+        <field name="padding">3</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="patient_total_cases_sequence" model="ir.sequence">
+        <field name="name">Patient Total Cases</field>
+        <field name="code">patient.total.cases</field>
+        <field name="padding">1</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="medical_service_sequence" model="ir.sequence">
+        <field name="name">Medical Service Sequence</field>
+        <field name="code">medical.service</field>
+        <field name="prefix">MEDSR</field>
+        <field name="padding">3</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="pathalogy_groups_sequence" model="ir.sequence">
+        <field name="name">Pathalogy Groups Sequence</field>
+        <field name="code">pathalogy.groups</field>
+        <field name="prefix">LBG</field>
+        <field name="padding">4</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="diseases_sequence" model="ir.sequence">
+        <field name="name">Diseases Sequence</field>
+        <field name="code">diseases.diseases</field>
+        <field name="prefix">DIS</field>
+        <field name="padding">4</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="Physician_sequence" model="ir.sequence">
+        <field name="name">Physician Sequence</field>
+        <field name="code">physician.physician</field>
+        <field name="prefix">SHP</field>
+        <field name="padding">4</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="insaurances_sequence" model="ir.sequence">
+        <field name="name">Insaurances Sequence</field>
+        <field name="code">insaurances.insaurances</field>
+        <field name="prefix">I</field>
+        <field name="padding">4</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="medical_speciality_sequence" model="ir.sequence">
+        <field name="name">Medical Speciality Sequence</field>
+        <field name="code">medical.speciality</field>
+        <field name="prefix">SP</field>
+        <field name="padding">4</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="street_name_sequence" model="ir.sequence">
+        <field name="name">Street Name Sequence</field>
+        <field name="code">recreational.drugs</field>
+        <field name="prefix">Street</field>
+        <field name="padding">1</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+</odoo>

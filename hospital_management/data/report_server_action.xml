@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="appointment_report_acrtion" model="ir.actions.server">
+        <field name="name">Print Appointment Recipts</field>
+        <field name="model_id" ref="hospital_management.model_appointment_appointment"/>
+        <field name="binding_model_id" ref="hospital_management.model_appointment_appointment"/>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.action_download_appointment_report()
+        </field>
+    </record>
+
+    <record id="prescription_report_action" model="ir.actions.server">
+        <field name="name">Print Prescription Recipts</field>
+        <field name="model_id" ref="hospital_management.model_prescription_prescription"/>
+        <field name="binding_model_id" ref="hospital_management.model_prescription_prescription"/>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.prescription_report_download()
+        </field>
+    </record>
+    
+    <record id="bed_transfer_button" model="ir.actions.server">
+        <field name="name">Bed transfer</field>
+        <field name="model_id" ref="hospital_management.model_administration_administration"/>
+        <field name="binding_model_id" ref="hospital_management.model_administration_administration"/>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.action_transfer_bed()
+        </field>
+    </record>
+
+    <record id="medical_service_invoice_button" model="ir.actions.server">
+        <field name="name">Create Invoice</field>
+        <field name="model_id" ref="hospital_management.model_medical_service"/>
+        <field name="binding_model_id" ref="hospital_management.model_medical_service"/>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.action_open_medical_invoice_wizard()
+        </field>
+    </record>
+
+    <record id="patient_appointment_action" model="ir.actions.server">
+        <field name="name">Appointments</field>
+        <field name="model_id" ref="hospital_management.model_patient_patient"/>
+        <field name="binding_model_id" ref="hospital_management.model_patient_patient"/>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.action_show_patient_appointments()
+        </field>
+    </record>
+
+    <record id="patient_lab_test_action" model="ir.actions.server">
+        <field name="name">Lab Reports</field>
+        <field name="model_id" ref="hospital_management.model_patient_patient"/>
+        <field name="binding_model_id" ref="hospital_management.model_patient_patient"/>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.action_show_patient_lab_result()
+        </field>
+    </record>
+
+    <record id="patient_pcs_total_action" model="ir.actions.server">
+        <field name="name">PCS</field>
+        <field name="model_id" ref="hospital_management.model_patient_patient"/>
+        <field name="binding_model_id" ref="hospital_management.model_patient_patient"/>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.action_show_patient_pcs_total()
+        </field>
+    </record>
+
+    <record id="patient_prescription_action" model="ir.actions.server">
+        <field name="name">Prescription Orders</field>
+        <field name="model_id" ref="hospital_management.model_patient_patient"/>
+        <field name="binding_model_id" ref="hospital_management.model_patient_patient"/>
+        <field name="binding_view_types">form</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.action_show_patient_prescription_orders()
+        </field>
+    </record>
+</odoo>
