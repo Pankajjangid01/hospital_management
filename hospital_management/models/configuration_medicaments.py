@@ -1,6 +1,6 @@
+import re
 from odoo import models,fields,api
 from odoo.exceptions import ValidationError
-import re
 
 class Medicaments(models.Model):
     
@@ -12,6 +12,7 @@ class Medicaments(models.Model):
 
     @api.onchange("route")
     def _onchange_route(self):
+        """method to set the value of the code on the change of the route"""
         for record in self:
             if record.route:
                 record.code = record.route
@@ -28,6 +29,7 @@ class MedicamentForm(models.Model):
 
     @api.onchange("medicament_from")
     def _onchange_medicament_from(self):
+        """method to set the medicament code"""
         for record in self:
             if record.medicament_from:
                 record.medicament_code = record.medicament_from

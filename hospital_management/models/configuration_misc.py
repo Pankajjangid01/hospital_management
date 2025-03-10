@@ -14,6 +14,7 @@ class MedicamentsMisc(models.Model):
 
     @api.model
     def create(self, vals):
+        """method to create the medicine in the medicament list"""
         record = super(MedicamentsMisc, self).create(vals)
         self.env["medicament.list"].create({
             "name": record.name,
@@ -27,6 +28,7 @@ class MedicamentsMisc(models.Model):
         return record
 
     def write(self, vals):
+        """method to update the medicine details on change in medicament"""
         res = super(MedicamentsMisc, self).write(vals)
         for record in self:
             medicament_list = self.env["medicament.list"].search([("name", "=", record.name)])
@@ -43,6 +45,7 @@ class MedicamentsMisc(models.Model):
         return res
 
     def unlink(self):
+        """method to delete the medicine from medicament list """
         for record in self:
             self.env["medicament.list"].search([("name", "=", record.name)]).unlink()
         return super(MedicamentsMisc, self).unlink()

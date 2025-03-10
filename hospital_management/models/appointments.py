@@ -4,6 +4,7 @@ from odoo.exceptions import ValidationError
 
 class Appointments(models.Model):
     """Appointment Class to create the appointment dof the patient"""
+    
     _name = "appointment.appointment"
     _description = "Appointment model to handle the patient appointments"
     _rec_name = "appointment_id"

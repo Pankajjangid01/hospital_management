@@ -106,12 +106,13 @@ class BedTransfer(models.Model):
 
     @api.constrains('to_bed')
     def _check_bed_availability(self):
+        """constraint to check the availability of the bed"""
         for record in self:
             if record.to_bed.is_allocated:
                 raise exceptions.ValidationError(f"Bed {record.to_bed.health_center_bed_id} is already allocated!")
 
     def action_transfer(self):
-        """"method to transfer the patient bed """
+        """"method to transfer the patient bed"""
         if self.to_bed == self.from_bed:
             raise ValidationError("Cannot tranfer on the same bed. Please select valid bed number")
 

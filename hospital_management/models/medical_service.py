@@ -53,7 +53,6 @@ class MedicineDetails(models.Model):
     @api.onchange('medicine_from')
     def _onchange_date(self):
         """Method to validate the medicine to date"""
-
         for record in self:
             if record.medicine_from > record.medicine_to_date:
                 raise ValidationError("Medicine End Date can not be the date before Medicine From Date")
